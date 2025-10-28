@@ -1,16 +1,13 @@
-import {
+import { useWebApp } from "vue-tg";
 
-} from 'vue-tg'
+export const useTgWebAppStore = defineStore("tgWebAppStore", {
+  state: () => ({
+    webAppData: null,
+  }),
 
-export const useTgWebAppStore = defineStore('tgWebAppStore', {
-    state: () => ({
-        webAppData: null,
-    }),
-
-    actions: {
-
-        init() {
-
-        },
-    }
-})
+  actions: {
+    init() {
+      console.log(useWebApp());
+    },
+  },
+});
